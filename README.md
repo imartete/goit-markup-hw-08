@@ -1,5 +1,5 @@
-# goit-markup-hw-01
+# goit-markup-hw-02
 
-Homework 01
+Homework 02
 
-[GitHub Pages](https://imartete.github.io/goit-markup-hw-01/)
+[GitHub Pages](https://imartete.github.io/goit-markup-hw-02/)
