@@ -1,3 +1,123 @@
+:root {
+  --bg: #ffffff;
+  --page-highlights: #2f303a;
+  --highlights: #2196f3;
+  --dimmed: #f5f4fa;
+  --default-text: #212121;
+  --dimmed-text: #757575;
+  --contrast-text: #ffffff;
+  --highlighted-text: #2196f3;
+  --font-heavy: 700;
+  --font: "Roboto", sans-serif;
+}
+
 body {
-  background-color: #e5e5e5;
+  background-color: var(--bg);
+  font-family: var(--font);
+  color: var(--default-text);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: var(--default-text);
+  text-decoration: none;
+}
+
+header {
+  font-weight: 500;
+}
+
+footer {
+  background-color: var(--page-highlights);
+}
+
+address {
+  font-style: unset;
+}
+
+.highlight-on-hover *:hover,
+.highlight-on-hover *:focus {
+  color: var(--highlighted-text);
+}
+
+.low-baseline * {
+  color: var(--contrast-text);
+}
+
+.hero-banner {
+  background-color: var(--page-highlights);
+  color: var(--contrast-text);
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.3;
+  letter-spacing: 0.06em;
+}
+
+.contact {
+  color: var(--dimmed-text);
+}
+
+.hidden-title {
+  opacity: 0;
+}
+
+.logo-highlight {
+  color: var(--highlighted-text);
+}
+
+.highlighted {
+  background-color: var(--highlights);
+  color: var(--contrast-text);
+  font-size: 16px;
+  font-weight: var(--font-heavy);
+  line-height: 1.8;
+  letter-spacing: 0.06em;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: var(--font-heavy);
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+}
+
+.block-title {
+  font-size: 36px;
+  font-weight: var(--font-heavy);
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+}
+
+.team {
+  background-color: var(--dimmed);
+}
+
+.feature-title {
+  font-weight: var(--font-heavy);
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+}
+
+.navigation {
+  background-color: var(--dimmed);
+  color: var(--default-text);
+}
+
+.navigation:hover,
+.mavigation:focus {
+  background-color: var(--highlights);
+  color: var(--contrast-text);
+}
+
+.active {
+  color: var(--highlighted-text);
 }
