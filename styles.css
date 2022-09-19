@@ -7,41 +7,35 @@
   --dimmed-text: #757575;
   --contrast-text: #ffffff;
   --highlighted-text: #2196f3;
-  --font-heavy: 700;
-  --font: "Roboto", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+  --font-relaway: "Raleway", sans-serif;
 }
 
 body {
   background-color: var(--bg);
-  font-family: var(--font);
+  font-family: var(--font-roboto);
   color: var(--default-text);
   font-size: 14px;
-  line-height: 1.7;
+  font-weight: 700;
 }
 
-button {
-  cursor: pointer;
-}
-
-ul {
+.list {
   list-style-type: none;
 }
 
-a {
-  color: var(--default-text);
+.link {
   text-decoration: none;
 }
 
-header {
+.top-baseline * {
+  color: var(--default-text);
+}
+
+.navigation-bar {
   font-weight: 500;
-}
-
-footer {
-  background-color: var(--page-highlights);
-}
-
-address {
-  font-style: unset;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  color: var(--default-text);
 }
 
 .highlight-on-hover *:hover,
@@ -49,75 +43,151 @@ address {
   color: var(--highlighted-text);
 }
 
-.low-baseline * {
-  color: var(--contrast-text);
-}
-
 .hero-banner {
   background-color: var(--page-highlights);
+}
+
+.hero-text {
   color: var(--contrast-text);
   font-size: 44px;
   font-weight: 900;
   line-height: 1.3;
   letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
-.contact {
-  color: var(--dimmed-text);
-}
-
-.hidden-title {
-  opacity: 0;
-}
-
-.logo-highlight {
-  color: var(--highlighted-text);
-}
-
-.highlighted {
+.offer-button {
+  cursor: pointer;
   background-color: var(--highlights);
   color: var(--contrast-text);
   font-size: 16px;
-  font-weight: var(--font-heavy);
   line-height: 1.8;
   letter-spacing: 0.06em;
 }
 
-.logo {
-  font-size: 26px;
-  font-weight: var(--font-heavy);
+.hidden-block-caption {
+  opacity: 0;
+}
+
+.feature-caption {
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.feature-description {
+  color: var(--dimmed-text);
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+}
+
+.block-caption {
+  font-size: 36px;
   line-height: 1.1;
   letter-spacing: 0.03em;
 }
 
-.block-title {
-  font-size: 36px;
-  font-weight: var(--font-heavy);
-  line-height: 1.1;
-  letter-spacing: 0.03em;
+.activity-picture {
+  width: 370px;
+  height: 294px;
 }
 
 .team {
   background-color: var(--dimmed);
 }
 
-.feature-title {
-  font-weight: var(--font-heavy);
+.member-card {
+  background-color: var(--bg);
+}
+
+.member-picture {
+  width: 270px;
+  height: 260px;
+}
+
+.member-name {
+  font-size: 16px;
+  font-weight: 500;
   line-height: 1.1;
   letter-spacing: 0.03em;
 }
 
-.navigation {
-  background-color: var(--dimmed);
-  color: var(--default-text);
+.member-title {
+  color: var(--dimmed-text);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
 }
 
-.navigation:hover,
-.mavigation:focus {
+.low-baseline {
+  background-color: var(--page-highlights);
+  color: var(--contrast-text);
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+}
+
+.low-baseline * {
+  color: var(--contrast-text);
+  font-style: inherit;
+}
+
+.contact {
+  color: var(--dimmed-text);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+
+.logo {
+  font-family: var(--font-relaway);
+  font-size: 26px;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+}
+
+.logo-highlight {
+  color: var(--highlighted-text);
+}
+
+.portfolio-navigation {
+  background-color: var(--dimmed);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+}
+
+.portfolio-navigation:hover,
+.portfolio-navigation:focus {
   background-color: var(--highlights);
   color: var(--contrast-text);
 }
 
+.products-pic {
+  width: 370px;
+  height: 294px;
+}
+
+.products-name {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.product-type {
+  color: var(--dimmed-text);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+}
+
 .active {
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
   color: var(--highlighted-text);
 }
