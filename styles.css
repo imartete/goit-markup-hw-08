@@ -16,7 +16,6 @@ body {
   font-family: var(--font-roboto);
   color: var(--default-text);
   font-size: 14px;
-  font-weight: 700;
 }
 
 .list {
@@ -60,6 +59,8 @@ body {
   cursor: pointer;
   background-color: var(--highlights);
   color: var(--contrast-text);
+  font-family: inherit;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.8;
   letter-spacing: 0.06em;
@@ -70,6 +71,7 @@ body {
 }
 
 .feature-caption {
+  font-size: 14px;
   line-height: 1.1;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -77,7 +79,6 @@ body {
 
 .feature-description {
   color: var(--dimmed-text);
-  font-weight: 400;
   line-height: 1.7;
   letter-spacing: 0.03em;
 }
@@ -88,22 +89,12 @@ body {
   letter-spacing: 0.03em;
 }
 
-.activity-picture {
-  width: 370px;
-  height: 294px;
-}
-
 .team {
   background-color: var(--dimmed);
 }
 
 .member-card {
   background-color: var(--bg);
-}
-
-.member-picture {
-  width: 270px;
-  height: 260px;
 }
 
 .member-name {
@@ -116,7 +107,6 @@ body {
 .member-title {
   color: var(--dimmed-text);
   font-size: 16px;
-  font-weight: 400;
   line-height: 1.1;
   letter-spacing: 0.03em;
 }
@@ -124,7 +114,6 @@ body {
 .low-baseline {
   background-color: var(--page-highlights);
   color: var(--contrast-text);
-  font-weight: 400;
   line-height: 1.7;
   letter-spacing: 0.03em;
 }
@@ -154,6 +143,7 @@ body {
 
 .portfolio-navigation {
   background-color: var(--dimmed);
+  font-family: inherit;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.6;
@@ -166,20 +156,15 @@ body {
   color: var(--contrast-text);
 }
 
-.products-pic {
-  width: 370px;
-  height: 294px;
-}
-
-.products-name {
+.product-name {
   font-size: 18px;
+  font-weight: 700;
   line-height: 2;
   letter-spacing: 0.06em;
 }
 
 .product-type {
   color: var(--dimmed-text);
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.8;
   letter-spacing: 0.03em;
