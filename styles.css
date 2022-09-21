@@ -152,8 +152,29 @@ img {
   text-align: center;
 }
 
-.hidden-block-caption {
-  opacity: 0;
+/* FEATURES */
+
+.features-bar {
+  width: 100%;
+  padding-top: 94px;
+  padding-bottom: 118px;
+}
+
+.features-parent {
+  text-align: center;
+}
+
+.features-list {
+  display: flex;
+}
+
+.features-list .feature-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.feature-item * {
+  width: 270px;
+  margin: 0;
 }
 
 .feature-caption {
@@ -161,6 +182,7 @@ img {
   line-height: 1.1;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .feature-description {
@@ -169,18 +191,58 @@ img {
   letter-spacing: 0.03em;
 }
 
+/* ACTIVITY SECTION */
+
+.activity-bar {
+  width: 100%;
+  padding-bottom: 94px;
+}
+
+.activity-parent {
+  text-align: center;
+}
+
+.activity-list {
+  display: flex;
+  justify-content: center;
+}
+
+.activity-list .activity-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .block-caption {
   font-size: 36px;
   line-height: 1.1;
   letter-spacing: 0.03em;
+  margin: 0;
+  margin-bottom: 50px;
 }
 
-.team {
+/* TEAM */
+
+.team-bar {
   background-color: var(--dimmed);
+  width: 100%;
+  padding: 94px 0;
+}
+
+.team-parent {
+  text-align: center;
+}
+
+.team-list {
+  display: flex;
+}
+
+.team-list .team-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .member-card {
   background-color: var(--bg);
+  width: 270px;
+  border-radius: 5px;
 }
 
 .member-name {
@@ -188,6 +250,9 @@ img {
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: 0.03em;
+
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .member-title {
@@ -195,6 +260,8 @@ img {
   font-size: 16px;
   line-height: 1.1;
   letter-spacing: 0.03em;
+  display: inline-block;
+  margin-bottom: 30px;
 }
 
 /* FOOTER */
@@ -206,8 +273,8 @@ img {
   letter-spacing: 0.03em;
 
   width: 100%;
-  padding: 0;
-  margin: 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .low-baseline * {
@@ -215,13 +282,10 @@ img {
   font-style: inherit;
 }
 
-.footer-parent {
-  padding: 60px auto;
-}
-
 .footer-logo {
   margin-bottom: 20px;
 }
+
 .address-list .item:not(:last-child) {
   margin-bottom: 9px;
 }
@@ -253,6 +317,11 @@ img {
   font-size: 16px;
   line-height: 1.8;
   letter-spacing: 0.03em;
+}
+
+.hidden-block-caption {
+  opacity: 0;
+  margin: 0;
 }
 
 .active {
