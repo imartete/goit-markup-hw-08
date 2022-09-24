@@ -39,14 +39,20 @@
           </ul>
         </nav>
         <ul class="header-contacts highlight-on-hover list">
-          <li class="item">
+          <li class="contact-item">
             <a href="mailto:info@devstudio" class="header-contact contact link"
-              >info@devstudio</a
+              ><svg class="contact-icon icon-mail">
+                <use href="images/icons.svg#icon-mail"></use>
+              </svg>
+              info@devstudio</a
             >
           </li>
-          <li class="item">
+          <li class="contact-item">
             <a href="tel:+380961111111" class="header-contact contact link"
-              >+38 096 111 11 11</a
+              ><svg class="contact-icon icon-phone">
+                <use href="images/icons.svg#icon-phone"></use>
+              </svg>
+              +38 096 111 11 11</a
             >
           </li>
         </ul>
@@ -249,27 +255,67 @@
     </main>
 
     <footer class="low-baseline">
-      <div class="container">
-        <a href="/" class="footer-logo logo link"
-          ><span class="logo-highlight">Web</span>Studio</a
-        >
-        <address>
-          <ul class="address-list list">
-            <li class="item">
-              <a href="/" class="link">м. Київ, пр-т Лесі Українки, 26</a>
+      <div class="footer-parent container">
+        <div>
+          <a href="/" class="footer-logo logo link"
+            ><span class="logo-highlight">Web</span>Studio</a
+          >
+          <address>
+            <ul class="address-list list">
+              <li class="item">
+                <a href="/" class="link">м. Київ, пр-т Лесі Українки, 26</a>
+              </li>
+              <li class="item">
+                <a class="contact link" href="mailto:info@devstudio"
+                  >info@devstudio</a
+                >
+              </li>
+              <li class="item">
+                <a class="contact link" href="tel:+380961111111"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+
+        <div class="footer-socials">
+          <div><h4 class="footer-text">Приєднуйтесь</h4></div>
+          <ul class="socials-list list">
+            <li>
+              <a class="link"
+                ><div class="socials-icon">
+                  <svg class="icon-social">
+                    <use href="images/icons.svg#icon-instagram"></use>
+                  </svg></div
+              ></a>
             </li>
-            <li class="item">
-              <a class="contact link" href="mailto:info@devstudio"
-                >info@devstudio</a
-              >
+            <li>
+              <a class="link"
+                ><div class="twitter socials-icon">
+                  <svg class="icon-social">
+                    <use href="images/icons.svg#icon-twitter"></use>
+                  </svg></div
+              ></a>
             </li>
-            <li class="item">
-              <a class="contact link" href="tel:+380961111111"
-                >+38 096 111 11 11</a
-              >
+            <li>
+              <a class="link"
+                ><div class="socials-icon">
+                  <svg class="icon-social">
+                    <use href="images/icons.svg#icon-facebook"></use>
+                  </svg></div
+              ></a>
+            </li>
+            <li>
+              <a class="link"
+                ><div class="socials-icon">
+                  <svg class="icon-social">
+                    <use href="images/icons.svg#icon-linkedin"></use>
+                  </svg></div
+              ></a>
             </li>
           </ul>
-        </address>
+        </div>
       </div>
     </footer>
   </body>

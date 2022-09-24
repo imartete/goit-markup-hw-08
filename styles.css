@@ -56,6 +56,7 @@ h6 {
   text-decoration: none;
   color: var(--default-text);
   display: inline-block;
+  cursor: pointer;
 }
 
 .container {
@@ -104,10 +105,11 @@ h6 {
 
 .navigation-bar {
   display: flex;
+  gap: 50px;
 }
 
-.navigation-bar .item:not(:last-child) {
-  margin-right: 50px;
+.navigation-bar *:hover {
+  color: var(--highlighted-text);
 }
 
 .navigation-link {
@@ -121,19 +123,36 @@ h6 {
 .header-contacts {
   display: flex;
   margin-left: auto;
+  gap: 50px;
 }
 
-.header-contacts .item:not(:last-child) {
-  margin-right: 50px;
+.contact-item * {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-icon {
+  fill: currentColor;
+}
+
+.icon-mail {
+  width: 16px;
+  height: 12px;
+}
+
+.icon-phone {
+  width: 10px;
+  height: 16px;
 }
 
 .header-contact {
   padding: 32px 0;
 }
 
-.highlight-on-hover *:hover,
-.highlight-on-hover *:focus {
+.header-contact:hover {
   color: var(--highlighted-text);
+  fill: currentColor;
 }
 
 /* HERO */
@@ -147,7 +166,7 @@ h6 {
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url("../images/hero-baner.jpg");
+    url("images/hero-baner.jpg");
   height: 600px;
   max-width: 1600px;
   margin: 0 auto;
@@ -224,6 +243,15 @@ h6 {
   margin-bottom: 30px;
   background-color: var(--dimmed);
   border-radius: 4px;
+  fill: #212121;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-feature {
+  width: 70px;
+  height: 70px;
 }
 
 /* ACTIVITY SECTION */
@@ -288,10 +316,21 @@ h6 {
   letter-spacing: 0.03em;
 
   display: block;
+  margin-bottom: 16px;
 }
 
 .member-data {
   padding: 30px 0;
+}
+
+.member-socials-list * {
+  color: var(--dimmed-text);
+}
+
+.member-circle:hover,
+.member-circle:focus {
+  background-color: var(--highlights);
+  fill: var(--contrast-text);
 }
 
 /* Clents */
@@ -306,10 +345,27 @@ h6 {
 }
 
 .client-card {
+  color: var(--dimmed-text);
   height: 92px;
   width: 170px;
   border: solid 1px var(--dimmed);
   border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.icon-client {
+  fill: currentColor;
+  width: 106px;
+  height: 60px;
+}
+
+.client-card:hover {
+  border: solid 1px var(--highlights);
+  color: var(--highlighted-text);
+  fill: currentColor;
 }
 
 /* FOOTER */
@@ -350,6 +406,32 @@ h6 {
   text-transform: uppercase;
 
   margin-bottom: 20px;
+}
+
+.socials-icon {
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: currentColor;
+}
+
+.icon-social {
+  width: 20px;
+  height: 20px;
+}
+
+.socials-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.twitter {
+  background-color: var(--highlights);
 }
 
 /* PORTFOLIO navigation */
