@@ -20,14 +20,14 @@
   </head>
 
   <body>
-    <header class="top-baseline section">
+    <header class="top-baseline">
       <div class="header-parent container">
         <a href="/" class="header-logo logo link"
           ><span class="logo-highlight">Web</span>Studio</a
         >
         <nav>
           <ul class="navigation-bar list">
-            <li class="item">
+            <li class="active-item item">
               <a href="index.html" class="active navigation-link link"
                 >Студія</a
               >
@@ -67,7 +67,9 @@
       <section class="hero-banner">
         <div class="container">
           <h1 class="hero-text">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ ВАШОГО БІЗНЕСУ</h1>
-          <button type="button" class="offer-button">Замовити послугу</button>
+          <button data-modal-open type="button" class="offer-button">
+            Замовити послугу
+          </button>
         </div>
       </section>
 
@@ -133,29 +135,32 @@
         <div class="activity-parent container">
           <h2 class="block-caption">Чим ми займаємося</h2>
           <ul class="activity-list list">
-            <li>
+            <li class="activity-item">
               <img
                 src="images/code.jpg"
                 alt="coding"
                 width="370"
                 height="294"
               />
+              <h4 class="activity-meta">десктопні додатки</h4>
             </li>
-            <li>
+            <li class="activity-item">
               <img
                 src="images/analyse.jpg"
                 alt="analyse"
                 width="370"
                 height="294"
               />
+              <h4 class="activity-meta">мобільні додатки</h4>
             </li>
-            <li>
+            <li class="activity-item">
               <img
                 src="images/design.jpg"
                 alt="design"
                 width="370"
                 height="294"
               />
+              <h4 class="activity-meta">дизайнерські рішення</h4>
             </li>
           </ul>
         </div>
@@ -364,8 +369,8 @@
         </div>
       </section>
 
-      <section class="section">
-        <div class="client-bar container">
+      <section class="client-bar section">
+        <div class="container">
           <h2 class="block-caption">Постійні клієнти</h2>
           <ul class="client-list list">
             <li>
@@ -490,5 +495,17 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button data-modal-close class="close-button">
+          <svg class="icon-close">
+            <use href="images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="modal.js"></script>
   </body>
 </html>
