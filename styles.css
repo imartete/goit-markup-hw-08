@@ -140,27 +140,24 @@ h6 {
 
 .contact-icon {
   fill: currentColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-mail {
   width: 16px;
   height: 12px;
+  fill: currentColor;
 }
 
 .icon-phone {
   width: 10px;
   height: 16px;
+  fill: currentColor;
 }
 
 .header-contact {
   padding: 32px 0;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.header-contact:hover,
-.header-contact:focus {
-  color: var(--highlighted-text);
-  fill: currentColor;
 }
 
 /* HERO */
@@ -362,9 +359,8 @@ h6 {
   padding: 30px 0;
 }
 
-.member-socials-link {
+.member-socials {
   color: var(--dimmed-icons);
-  border-radius: 50%;
 }
 
 /* Clents */
@@ -380,28 +376,34 @@ h6 {
 
 .client-card {
   color: var(--dimmed-icons);
+
   height: 92px;
   width: 170px;
   border: solid 1px var(--dimmed-icons);
   border-radius: 4px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   padding: 16px;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-client {
   fill: currentColor;
   width: 106px;
   height: 60px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-card:hover,
 .client-card:focus {
   border: solid 1px var(--highlights);
   color: var(--highlighted-text);
-  fill: currentColor;
 }
 
 /* FOOTER */
@@ -449,37 +451,37 @@ h6 {
 .socials-list {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 10px;
-}
-
-.socials-item {
-  height: 44px;
-  width: 44px;
-  border-radius: 50%;
 }
 
 .socials-link {
   background-color: rgba(255, 255, 255, 0.1);
-  fill: currentColor;
+  color: inherit;
+
   border-radius: 50%;
-  width: 100%;
-  height: 100%;
+  height: 44px;
+  width: 44px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-link:hover,
 .socials-link:focus {
   background-color: var(--highlights);
   color: var(--contrast-text);
-  fill: currentColor;
 }
 
 .icon-social {
+  fill: currentColor;
   width: 20px;
   height: 20px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* PORTFOLIO navigation */
@@ -498,11 +500,14 @@ h6 {
   font-weight: 500;
   line-height: 1.6;
   letter-spacing: 0.03em;
+  cursor: pointer;
 
   padding: 6px 22px;
   border: none;
   border-radius: 4px;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-navigation:hover,
@@ -535,7 +540,7 @@ h6 {
 
 .product-link {
   display: block;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .product-link:hover,
@@ -555,7 +560,8 @@ h6 {
   background-color: rgba(33, 150, 243, 0.9);
   opacity: 0;
   transform: translateY(100%);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   color: var(--contrast-text);
   font-size: 18px;
@@ -634,6 +640,12 @@ h6 {
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact:hover,
+.contact:focus {
+  color: var(--highlighted-text);
 }
 
 /* MODAl */
@@ -668,7 +680,6 @@ h6 {
   border-radius: 4px;
   min-width: 528px;
   min-height: 581px;
-  padding: 8px;
 
   background: var(--bg);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -682,10 +693,12 @@ h6 {
 }
 
 .close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
   display: flex;
-  justify-content: center;
-  margin-left: auto;
-  padding: 0;
+  align-items: center;
   width: 30px;
   height: 30px;
 
@@ -698,5 +711,4 @@ h6 {
   width: 18px;
   height: 18px;
   fill: black;
-  margin: auto;
 }
