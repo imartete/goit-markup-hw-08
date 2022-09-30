@@ -10,6 +10,7 @@
   --highlighted-text: #2196f3;
   --font-roboto: "Roboto", sans-serif;
   --font-relaway: "Raleway", sans-serif;
+  --animate: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html {
@@ -58,6 +59,12 @@ h6 {
   color: var(--default-text);
   display: inline-block;
   cursor: pointer;
+}
+
+.button {
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
 }
 
 .container {
@@ -110,7 +117,7 @@ h6 {
 }
 
 .navigation-link {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--animate);
 }
 
 .navigation-link:hover,
@@ -140,7 +147,7 @@ h6 {
 
 .contact-icon {
   fill: currentColor;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--animate);
 }
 
 .icon-mail {
@@ -157,7 +164,7 @@ h6 {
 
 .header-contact {
   padding: 32px 0;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--animate);
 }
 
 /* HERO */
@@ -194,19 +201,19 @@ h6 {
 }
 
 .offer-button {
-  cursor: pointer;
+  display: inline-block;
+  padding: 10px 32px;
+  border: none;
+  border-radius: 4px;
+
   background-color: var(--highlights);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   color: var(--contrast-text);
-  font-family: inherit;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.8;
   letter-spacing: 0.06em;
-
-  padding: 10px 32px;
-  border: none;
-  border-radius: 4px;
-  display: inline-block;
 }
 
 /* FEATURES */
@@ -386,18 +393,13 @@ h6 {
   align-items: center;
   justify-content: center;
 
-  padding: 16px;
-
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color var(--animate), color var(--animate);
 }
 
 .icon-client {
   fill: currentColor;
   width: 106px;
   height: 60px;
-
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-card:hover,
@@ -467,8 +469,7 @@ h6 {
   align-items: center;
   justify-content: center;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--animate), color var(--animate);
 }
 
 .socials-link:hover,
@@ -481,7 +482,67 @@ h6 {
   fill: currentColor;
   width: 20px;
   height: 20px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Subscribe to mailing */
+
+.icon-mailing {
+  fill: currentColor;
+  width: 24px;
+  height: 24px;
+}
+
+.mailing-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 26px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+
+  background-color: var(--highlights);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+}
+
+.mailing-field {
+  position: relative;
+  display: inline-block;
+  margin-right: 12px;
+}
+
+.mailing-input {
+  padding: 15px 16px;
+  width: 358px;
+
+  background-color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.mailing-label {
+  font-size: 16px;
+  line-height: 1.2;
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  color: var(--dimmed-text);
+  transform: translateY(-50%);
+  pointer-events: none;
+
+  transition: opacity var(--animate);
+  visibility: visible;
+}
+
+.mailing-input:focus + .mailing-label,
+.mailing-input:not(:placeholder-shown) + .mailing-label {
+  opacity: 0;
+  visibility: hidden;
 }
 
 /* PORTFOLIO navigation */
@@ -495,19 +556,16 @@ h6 {
 
 .portfolio-navigation {
   background-color: var(--dimmed);
-  font-family: inherit;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.6;
   letter-spacing: 0.03em;
-  cursor: pointer;
 
   padding: 6px 22px;
   border: none;
   border-radius: 4px;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow var(--animate), color var(--animate),
+    background-color var(--animate);
 }
 
 .portfolio-navigation:hover,
@@ -540,7 +598,7 @@ h6 {
 
 .product-link {
   display: block;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow var(--animate);
 }
 
 .product-link:hover,
@@ -560,8 +618,7 @@ h6 {
   background-color: rgba(33, 150, 243, 0.9);
   opacity: 0;
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--animate), opacity var(--animate);
 
   color: var(--contrast-text);
   font-size: 18px;
@@ -640,7 +697,7 @@ h6 {
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: 0.02em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--animate);
 }
 
 .contact:hover,
@@ -668,7 +725,7 @@ h6 {
   background-color: rgba(0, 0, 0, 0.2);
   visibility: visible;
   opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--animate);
 }
 
 .modal {
@@ -678,18 +735,25 @@ h6 {
   transform: translate(-50%, -50%) scale(1);
 
   border-radius: 4px;
-  min-width: 528px;
+  max-width: 528px;
   min-height: 581px;
+  padding: 40px;
 
   background: var(--bg);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   visibility: visible;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--animate);
 }
 
 .backdrop.is-hidden .modal {
-  translate: translate(-50%, -50%) scale(0.5);
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+.icon-close {
+  width: 11px;
+  height: 11px;
+  fill: currentColor;
 }
 
 .close-button {
@@ -697,18 +761,171 @@ h6 {
   top: 8px;
   right: 8px;
 
-  display: flex;
-  align-items: center;
   width: 30px;
   height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   background-color: #ffffff;
+  color: #000;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  transition: color var(--animate);
 }
 
-.icon-close {
-  width: 18px;
-  height: 18px;
-  fill: black;
+.close-button:hover,
+.close-button:focus {
+  color: var(--highlighted-text);
+}
+
+/* modal form */
+
+.modal-form {
+  text-align: center;
+}
+
+.modal-headline {
+  display: block;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+
+  margin-bottom: 30px;
+}
+
+.form-input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  width: 448px;
+  padding: 12px 42px;
+  margin-top: 4px;
+  transition: border var(--animate);
+  justify-content: center;
+  outline: transparent;
+}
+
+.form-input:hover,
+.form-input:focus,
+.form-input:not(:placeholder-shown) {
+  border: 1px solid var(--highlighted-text);
+}
+
+.form-input:hover + .form-icon,
+.form-input:focus + .form-icon,
+.form-input:not(:placeholder-shown) + .form-icon {
+  fill: var(--highlighted-text);
+}
+
+.form-item {
+  position: relative;
+
+  display: block;
+
+  text-align: start;
+  color: var(--dimmed-text);
+  font-size: 12px;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+}
+
+.form-icon {
+  position: absolute;
+  top: 31px;
+  left: 15px;
+
+  fill: var(--default-text);
+  transition: fill var(--animate);
+}
+
+.icon-persona {
+  width: 12px;
+  height: 12px;
+}
+
+.icon-phone-number {
+  width: 13px;
+  height: 13px;
+}
+
+.icon-email-address {
+  width: 15px;
+  height: 15px;
+}
+
+.form-item:not(:first-child) {
+  margin-top: 10px;
+}
+
+.form-label {
+  display: block;
+}
+
+.form-comment {
+  padding: 12px 16px;
+  resize: none;
+  width: 448px;
+  min-height: 120px;
+}
+
+.form-comment::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+/*  */
+.form-agreement {
+  color: var(--default-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.agreement-icon {
+  width: 16px;
+  height: 15px;
+}
+
+.agreement-icon-uncheck {
+  display: block;
+  transition: opacity var(--animate);
+}
+
+.agreement-checkbox:checked + .agreement-icon .agreement-icon-uncheck {
+  opacity: 0;
+}
+
+.agreement-icon-check {
+  opacity: 0;
+  transition: opacity var(--animate);
+}
+
+.agreement-checkbox:checked + .agreement-icon .agreement-icon-check {
+  opacity: 1;
+}
+
+.agreement-text {
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  user-select: none;
+  color: var(--dimmed-text);
+}
+
+.agreement-link {
+  cursor: default;
+  color: var(--highlighted-text);
+  text-decoration: underline;
+}
+
+.form-button {
+  display: inline-block;
+  margin-top: 40px;
+
+  color: var(--contrast-text);
+  line-height: 1.8;
+  letter-spacing: 0.06em;
 }
