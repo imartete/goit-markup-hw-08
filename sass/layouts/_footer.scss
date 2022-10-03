@@ -1,0 +1,37 @@
+.low-baseline {
+  background-color: var(--page-highlights);
+  color: var(--contrast-text);
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+
+  width: 100%;
+  padding: 60px 0;
+}
+
+.footer-parent {
+  display: flex;
+  gap: 70px;
+  align-items: baseline;
+}
+
+.footer-logo {
+  color: inherit;
+  margin-bottom: 20px;
+}
+
+.address-list .item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.location {
+  color: inherit;
+}
+
+.footer-text {
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+}

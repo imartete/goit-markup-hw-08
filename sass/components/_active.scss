@@ -1,0 +1,21 @@
+.active {
+  color: var(--highlights);
+}
+
+.active-item {
+  position: relative;
+  color: var(--highlights);
+  &::before {
+    content: "";
+
+    display: block;
+    position: absolute;
+    bottom: -1px;
+
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+
+    background-color: var(--highlights);
+  }
+}

@@ -1,19 +1,35 @@
 // utils
-@import 'utils/vars';
-@import 'utils/visually-hidden';
-// наставити шаблонів типу ліста і лінка десь секції, коли я єбашила на них стилі шоб не робити дівів 
-// міксін = плейсхолдер, але можна задавати параметри (зі змінними препроцессорів $pd $pb
+@import "utils/vars";
+@import "utils/visually-hidden";
+@import "utils/is-hidden";
 
 // base
-@import 'base/reset';
-@import 'base/common';
-// @import 'base/container'; card-set,
+@import "base/common";
+@import "base/reset";
+@import "base/container";
+@import "base/section";
 
 // // components
-// @import 'components/titles';
-// components/btn, logo,
+@import "components/button";
+@import "components/navigation";
+@import "components/active";
+@import "components/logo";
+@import "components/contacts";
+@import "components/caption";
+@import "components/socials";
+@import "components/mailing";
+@import "components/form";
+@import "components/agreement";
+@import "components/close-button";
+@import "components/sort";
 
 // // layouts
-// @import ''; header, other sections
-
-// 1. bem 
+@import "layouts/header";
+@import "layouts/hero";
+@import "layouts/features";
+@import "layouts/activity";
+@import "layouts/team";
+@import "layouts/clients";
+@import "layouts/footer";
+@import "layouts/backdrop";
+@import "layouts/products";

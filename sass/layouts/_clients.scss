@@ -1,0 +1,35 @@
+.client-bar {
+  text-align: center;
+}
+
+.client-list {
+  display: flex;
+  gap: 30px;
+}
+
+.client-card {
+  color: var(--dimmed-icons);
+
+  height: 92px;
+  width: 170px;
+  border: solid 1px var(--dimmed-icons);
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: border-color var(--animate), color var(--animate);
+
+  &:hover,
+  &:focus {
+    border: solid 1px var(--highlights);
+    color: var(--highlights);
+  }
+}
+
+.icon-client {
+  fill: currentColor;
+  width: 106px;
+  height: 60px;
+}

@@ -1,0 +1,43 @@
+.form-agreement {
+  color: var(--default-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.agreement-icon {
+  width: 16px;
+  height: 15px;
+  &uncheck {
+    display: block;
+    transition: opacity var(--animate);
+  }
+  &check {
+    opacity: 0;
+    transition: opacity var(--animate);
+  }
+}
+
+.agreement-checkbox:checked + .agreement-icon .agreement-icon-uncheck {
+  opacity: 0;
+}
+
+.agreement-checkbox:checked + .agreement-icon .agreement-icon-check {
+  opacity: 1;
+}
+
+.agreement-text {
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  user-select: none;
+  color: var(--dimmed-text);
+}
+
+.agreement-link {
+  cursor: default;
+  color: var(--highlights);
+  text-decoration: underline;
+}

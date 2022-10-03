@@ -1,0 +1,35 @@
+.hero {
+  background-color: var(--page-highlights);
+  text-align: center;
+  padding: 200px 0;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/hero-baner.jpg");
+  height: 600px;
+  max-width: 1600px;
+  margin: 0 auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero__headline {
+  color: var(--contrast-text);
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.3;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  display: block;
+  margin: 0 auto 30px auto;
+  width: 696px;
+}
+
+.hero__button {
+  display: inline-block;
+  padding: 10px 32px;
+}

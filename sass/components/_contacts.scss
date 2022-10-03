@@ -1,0 +1,34 @@
+.contact {
+  color: var(--dimmed-text);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  transition: color var(--animate);
+  &:hover,
+  &:focus {
+    color: var(--highlights);
+  }
+}
+
+.contact-item * {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-icon {
+  fill: currentColor;
+  transition: fill var(--animate);
+}
+
+.icon-mail {
+  width: 16px;
+  height: 12px;
+  fill: currentColor;
+}
+
+.icon-phone {
+  width: 10px;
+  height: 16px;
+  fill: currentColor;
+}

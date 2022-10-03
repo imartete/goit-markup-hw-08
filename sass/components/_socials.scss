@@ -1,0 +1,33 @@
+.socials-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.socials-link {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: inherit;
+
+  border-radius: 50%;
+  height: 44px;
+  width: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color var(--animate), color var(--animate);
+
+  &:hover,
+  &:focus {
+    background-color: var(--highlights);
+    color: var(--contrast-text);
+  }
+}
+
+.icon-social {
+  fill: currentColor;
+  width: 20px;
+  height: 20px;
+}

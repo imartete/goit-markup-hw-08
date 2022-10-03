@@ -1,0 +1,35 @@
+.features__list {
+  display: flex;
+  gap: 30px;
+}
+
+.features__icon-box {
+  height: 120px;
+  width: 270px;
+  margin-bottom: 30px;
+  background-color: var(--dimmed);
+  border-radius: 4px;
+  fill: #212121;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.features__icon {
+  width: 70px;
+  height: 70px;
+}
+
+.feature__caption {
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.feature__meta {
+  color: var(--dimmed-text);
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+}
