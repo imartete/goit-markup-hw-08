@@ -16,30 +16,30 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="main.min.css" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/main.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
 
   <body>
-    <header class="top-baseline">
-      <div class="header-parent container">
-        <a href="/" class="header-logo logo link"
-          ><span class="logo-highlight">Web</span>Studio</a
+    <header class="page-header">
+      <div class="page-header__wrapper container">
+        <a href="/" class="page-header__logo logo link"
+          ><span class="logo__highlight">Web</span>Studio</a
         >
         <nav>
-          <ul class="navigation-bar list">
+          <ul class="navigation list">
             <li class="active-item item">
-              <a href="index.html" class="active navigation-link link"
+              <a href="index.html" class="active navigation__link link"
                 >Студія</a
               >
             </li>
             <li class="item">
-              <a href="portfolio.html" class="navigation-link link"
+              <a href="portfolio.html" class="navigation__link link"
                 >Портфоліо</a
               >
             </li>
             <li class="item">
-              <a href="/" class="navigation-link link">Контакти</a>
+              <a href="/" class="navigation__link link">Контакти</a>
             </li>
           </ul>
         </nav>
@@ -67,65 +67,65 @@
     </header>
 
     <main>
-      <section class="hero-banner">
+      <section class="hero">
         <div class="container">
-          <h1 class="hero-text">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ ВАШОГО БІЗНЕСУ</h1>
-          <button data-modal-open type="button" class="offer-button button">
+          <h1 class="hero__headline">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ ВАШОГО БІЗНЕСУ</h1>
+          <button data-modal-open type="button" class="hero__button button">
             Замовити послугу
           </button>
         </div>
       </section>
 
-      <section class="features-bar section">
-        <div class="feature-parent container">
+      <section class="features section">
+        <div class="container">
           <h2 class="visually-hidden">Чому ми особливі</h2>
-          <ul class="features-list list">
-            <li class="feature-item">
-              <div class="feature-illustration">
-                <svg class="icon-feature">
+          <ul class="features__list list">
+            <li class="features__item">
+              <div class="features__icon-box">
+                <svg class="features__icon">
                   <use href="images/icons.svg#icon-antena"></use>
                 </svg>
               </div>
-              <h3 class="feature-caption">УВАГА ДО ДЕТАЛЕЙ</h3>
-              <p class="feature-description">
+              <h3 class="features__caption">УВАГА ДО ДЕТАЛЕЙ</h3>
+              <p class="feature__meta">
                 Ідейні міркування, і навіть початок повсякденної роботи з
                 формування позиції.
               </p>
             </li>
 
-            <li class="feature-item">
-              <div class="feature-illustration">
-                <svg class="icon-feature">
+            <li class="features__item">
+              <div class="features__icon-box">
+                <svg class="features__icon">
                   <use href="images/icons.svg#icon-clock"></use>
                 </svg>
               </div>
-              <h3 class="feature-caption">ПУНКТУАЛЬНІСТЬ</h3>
-              <p class="feature-description">
+              <h3 class="feature__caption">ПУНКТУАЛЬНІСТЬ</h3>
+              <p class="feature__meta">
                 Завдання організації, особливо рамки і місце навчання кадрів
                 тягне у себе.
               </p>
             </li>
 
-            <li class="feature-item">
-              <div class="feature-illustration">
-                <svg class="icon-feature">
+            <li class="features__item">
+              <div class="features__icon-box">
+                <svg class="features__icon">
                   <use href="images/icons.svg#icon-diagram"></use>
                 </svg>
               </div>
-              <h3 class="feature-caption">ПЛАНУВАННЯ</h3>
-              <p class="feature-description">
+              <h3 class="feature__caption">ПЛАНУВАННЯ</h3>
+              <p class="feature__meta">
                 Так само консультація з широким активом значною мірою зумовлює.
               </p>
             </li>
 
-            <li class="feature-item">
-              <div class="feature-illustration">
-                <svg class="icon-feature">
+            <li class="features__item">
+              <div class="features__icon-box">
+                <svg class="features__icon">
                   <use href="images/icons.svg#icon-cosmonaut"></use>
                 </svg>
               </div>
-              <h3 class="feature-caption">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
-              <p class="feature-description">
+              <h3 class="feature__caption">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+              <p class="feature__meta">
                 Значимість цих проблем настільки очевидна, що реалізація
                 планових завдань.
               </p>
@@ -134,36 +134,36 @@
         </div>
       </section>
 
-      <section class="activity-bar section">
-        <div class="activity-parent container">
-          <h2 class="block-caption">Чим ми займаємося</h2>
-          <ul class="activity-list list">
-            <li class="activity-item">
+      <section class="activity__section section">
+        <div class="container">
+          <h2 class="caption">Чим ми займаємося</h2>
+          <ul class="activity__list list">
+            <li class="activity__item">
               <img
                 src="images/code.jpg"
                 alt="coding"
                 width="370"
                 height="294"
               />
-              <h4 class="activity-meta">десктопні додатки</h4>
+              <h4 class="activity__meta">десктопні додатки</h4>
             </li>
-            <li class="activity-item">
+            <li class="activity__item">
               <img
                 src="images/analyse.jpg"
                 alt="analyse"
                 width="370"
                 height="294"
               />
-              <h4 class="activity-meta">мобільні додатки</h4>
+              <h4 class="activity__meta">мобільні додатки</h4>
             </li>
-            <li class="activity-item">
+            <li class="activity__item">
               <img
                 src="images/design.jpg"
                 alt="design"
                 width="370"
                 height="294"
               />
-              <h4 class="activity-meta">дизайнерські рішення</h4>
+              <h4 class="activity__meta">дизайнерські рішення</h4>
             </li>
           </ul>
         </div>
@@ -171,7 +171,7 @@
 
       <section class="team-bar section">
         <div class="team-parent container">
-          <h2 class="block-caption">Наша команда</h2>
+          <h2 class="caption">Наша команда</h2>
           <ul class="team-list list">
             <li class="team-item">
               <div class="member-card">
@@ -374,7 +374,7 @@
 
       <section class="client-bar section">
         <div class="container">
-          <h2 class="block-caption">Постійні клієнти</h2>
+          <h2 class="caption">Постійні клієнти</h2>
           <ul class="client-list list">
             <li>
               <a href="/" class="client-card">
@@ -432,7 +432,7 @@
       <div class="footer-parent container">
         <div>
           <a href="/" class="footer-logo logo link"
-            ><span class="logo-highlight">Web</span>Studio</a
+            ><span class="logo__highlight">Web</span>Studio</a
           >
           <address>
             <ul class="address-list list">
