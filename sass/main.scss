@@ -1,0 +1,19 @@
+// utils
+@import 'utils/vars';
+@import 'utils/visually-hidden';
+// наставити шаблонів типу ліста і лінка десь секції, коли я єбашила на них стилі шоб не робити дівів 
+// міксін = плейсхолдер, але можна задавати параметри (зі змінними препроцессорів $pd $pb
+
+// base
+@import 'base/reset';
+@import 'base/common';
+// @import 'base/container'; card-set,
+
+// // components
+// @import 'components/titles';
+// components/btn, logo,
+
+// // layouts
+// @import ''; header, other sections
+
+// 1. bem 
