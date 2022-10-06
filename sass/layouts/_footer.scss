@@ -109,7 +109,8 @@
   }
 
   @include mq(desk) {
-    flex-direction: row;
+    flex-direction: row
+    ;
     display: flex;
     justify-content: end;
     align-items: baseline;
