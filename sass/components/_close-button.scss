@@ -26,3 +26,24 @@
     color: var(--highlights);
   }
 }
+
+.menu-icon-close {
+  width: 19px;
+  height: 19px;
+}
+
+.menu-toggle-close {
+  position: absolute;
+  top: 21px;
+  right: 21px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}

@@ -17,7 +17,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="css/main.min.css" />
-    <link rel="stylesheet" href="css/styles.css" />
   </head>
 
   <body>
@@ -49,7 +48,7 @@
               href="mailto:info@devstudio.com"
               class="header-contact contact link"
               ><svg class="contact-icon icon-mail">
-                <use href="images/icons.svg#icon-mail"></use>
+                <use href="icons/icons.svg#icon-mail"></use>
               </svg>
               info@devstudio.com</a
             >
@@ -57,12 +56,21 @@
           <li class="contact-item">
             <a href="tel:+380961111111" class="header-contact contact link"
               ><svg class="contact-icon icon-phone">
-                <use href="images/icons.svg#icon-phone"></use>
+                <use href="icons/icons.svg#icon-phone"></use>
               </svg>
               +38 096 111 11 11</a
             >
           </li>
         </ul>
+        <button
+          class="menu-toggle js-open-menu button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-icon">
+            <use href="icons/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -83,24 +91,24 @@
             <li class="features__item">
               <div class="features__icon-box">
                 <svg class="features__icon">
-                  <use href="images/icons.svg#icon-antena"></use>
+                  <use href="icons/icons.svg#icon-antena"></use>
                 </svg>
               </div>
               <h3 class="features__caption">УВАГА ДО ДЕТАЛЕЙ</h3>
-              <p class="feature__meta">
+              <p class="features__meta">
                 Ідейні міркування, і навіть початок повсякденної роботи з
                 формування позиції.
               </p>
-            </li> -->
+            </li>
 
             <li class="features__item">
               <div class="features__icon-box">
                 <svg class="features__icon">
-                  <use href="images/icons.svg#icon-clock"></use>
+                  <use href="icons/icons.svg#icon-clock"></use>
                 </svg>
               </div>
-              <h3 class="feature__caption">ПУНКТУАЛЬНІСТЬ</h3>
-              <p class="feature__meta">
+              <h3 class="features__caption">ПУНКТУАЛЬНІСТЬ</h3>
+              <p class="features__meta">
                 Завдання організації, особливо рамки і місце навчання кадрів
                 тягне у себе.
               </p>
@@ -109,11 +117,11 @@
             <li class="features__item">
               <div class="features__icon-box">
                 <svg class="features__icon">
-                  <use href="images/icons.svg#icon-diagram"></use>
+                  <use href="icons/icons.svg#icon-diagram"></use>
                 </svg>
               </div>
-              <h3 class="feature__caption">ПЛАНУВАННЯ</h3>
-              <p class="feature__meta">
+              <h3 class="features__caption">ПЛАНУВАННЯ</h3>
+              <p class="features__meta">
                 Так само консультація з широким активом значною мірою зумовлює.
               </p>
             </li>
@@ -121,11 +129,11 @@
             <li class="features__item">
               <div class="features__icon-box">
                 <svg class="features__icon">
-                  <use href="images/icons.svg#icon-cosmonaut"></use>
+                  <use href="icons/icons.svg#icon-cosmonaut"></use>
                 </svg>
               </div>
-              <h3 class="feature__caption">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
-              <p class="feature__meta">
+              <h3 class="features__caption">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+              <p class="features__meta">
                 Значимість цих проблем настільки очевидна, що реалізація
                 планових завдань.
               </p>
@@ -140,28 +148,43 @@
           <ul class="activity__list list">
             <li class="activity__item">
               <img
-                src="images/code.jpg"
-                alt="coding"
-                width="370"
-                height="294"
+                class="team-avatar"
+                srcset="
+                  images/activity/work_01_d-min.jpg    370w,
+                  images/activity/work_01_d@2x-min.jpg 294w
+                "
+                sizes="(min-width: 1200px) 370px, 100vw"
+                src="images/activity/work_01_d-min.jpg"
+                alt="person coding"
+                loading="lazy"
               />
               <h4 class="activity__meta">десктопні додатки</h4>
             </li>
             <li class="activity__item">
               <img
-                src="images/analyse.jpg"
-                alt="analyse"
-                width="370"
-                height="294"
+                class="team-avatar"
+                srcset="
+                  images/activity/work_02_d-min.jpg    370w,
+                  images/activity/work_02_d@2x-min.jpg 294w
+                "
+                sizes="(min-width: 1200px) 370p, 100vw"
+                src="images/activity/work_02_d-min.jpg"
+                alt="person picking colors"
+                loading="lazy"
               />
               <h4 class="activity__meta">мобільні додатки</h4>
             </li>
             <li class="activity__item">
               <img
-                src="images/design.jpg"
-                alt="design"
-                width="370"
-                height="294"
+                class="team-avatar"
+                srcset="
+                  images/activity/work_03_d-min.jpg    370w,
+                  images/activity/work_03_d@2x-min.jpg 294w
+                "
+                sizes="(min-width: 1200px) 370px, 100vw"
+                src="images/activity/work_03_d-min.jpg"
+                alt="person picking colors"
+                loading="lazy"
               />
               <h4 class="activity__meta">дизайнерські рішення</h4>
             </li>
@@ -170,17 +193,26 @@
       </section>
 
       <section class="team-bar section">
-        <div class="team-parent container">
+        <div class="container">
           <h2 class="caption">Наша команда</h2>
           <ul class="team-list list">
             <li class="team-item">
               <div class="member-card">
                 <img
-                  src="images/igor.jpg"
-                  alt="Igor Demyanenko"
-                  width="270"
-                  height="260"
+                  srcset="
+                    images/team/team-01_m-min.jpg    450w,
+                    images/team/team-01_m@2x-min.jpg 460w,
+                    images/team/team-01_t-min.jpg    354w,
+                    images/team/team-01_t@2x-min.jpg 374w,
+                    images/team/team-01_d-min.jpg    270w,
+                    images/team/team-01_d@2x-min.jpg 260w
+                  "
+                  sizes="(min-width: 1200px) 260px, (min-width: 768px) 374px, (min-width: 480px) 450px, 100vw"
+                  src="images/team/team-01_d-min.jpg"
+                  alt="John Smith"
+                  loading="lazy"
                 />
+
                 <div class="member-data">
                   <h3 class="member-name">Ігор Дем'яненко</h3>
                   <p class="member-title">Product Designer</p>
@@ -189,7 +221,7 @@
                     <li>
                       <a href="/" class="socials-link link">
                         <svg class="icon-social">
-                          <use href="images/icons.svg#icon-instagram"></use>
+                          <use href="icons/icons.svg#icon-instagram"></use>
                         </svg>
                       </a>
                     </li>
@@ -197,7 +229,7 @@
                     <li>
                       <a href="/" class="socials-link link">
                         <svg class="icon-social">
-                          <use href="images/icons.svg#icon-twitter"></use>
+                          <use href="icons/icons.svg#icon-twitter"></use>
                         </svg>
                       </a>
                     </li>
@@ -205,7 +237,7 @@
                     <li>
                       <a href="/" class="socials-link link">
                         <svg class="icon-social">
-                          <use href="images/icons.svg#icon-facebook"></use>
+                          <use href="icons/icons.svg#icon-facebook"></use>
                         </svg>
                       </a>
                     </li>
@@ -213,7 +245,7 @@
                     <li>
                       <a href="/" class="socials-link link">
                         <svg class="icon-social">
-                          <use href="images/icons.svg#icon-linkedin"></use>
+                          <use href="icons/icons.svg#icon-linkedin"></use>
                         </svg>
                       </a>
                     </li>
@@ -225,10 +257,18 @@
             <li class="team-item">
               <div class="member-card">
                 <img
-                  src="images/olga.jpg"
-                  alt="Olga Repina"
-                  width="270"
-                  height="260"
+                  srcset="
+                    images/team/team-02_m-min.jpg    450w,
+                    images/team/team-02_m@2x-min.jpg 460w,
+                    images/team/team-02_t-min.jpg    354w,
+                    images/team/team-02_t@2x-min.jpg 374w,
+                    images/team/team-02_d-min.jpg    270w,
+                    images/team/team-02_d@2x-min.jpg 260w
+                  "
+                  sizes="(min-width: 1200px) 260px, (min-width: 768px) 374px, (min-width: 480px) 450px, 100vw"
+                  src="images/team/team-02_d-min.jpg"
+                  alt="John Smith"
+                  loading="lazy"
                 />
                 <div class="member-data">
                   <h3 class="member-name">Ольга Рєпіна</h3>
@@ -238,7 +278,7 @@
                     <li>
                       <a href="/" class="socials-link link">
                         <svg class="icon-social">
-                          <use href="images/icons.svg#icon-instagram"></use>
+                          <use href="icons/icons.svg#icon-instagram"></use>
                         </svg>
                       </a>
                     </li>
@@ -246,7 +286,7 @@
                     <li>
                       <a href="/" class="socials-link link">
                         <svg class="icon-social">
-                          <use href="images/icons.svg#icon-twitter"></use>
+                          <use href="icons/icons.svg#icon-twitter"></use>
                         </svg>
                       </a>
                     </li>
@@ -254,7 +294,7 @@
                     <li>
                       <a href="/" class="socials-link link">
                         <svg class="icon-social">
-                          <use href="images/icons.svg#icon-facebook"></use>
+                          <use href="icons/icons.svg#icon-facebook"></use>
                         </svg>
                       </a>
                     </li>
@@ -262,7 +302,7 @@
                     <li>
                       <a href="/" class="socials-link link">
                         <svg class="icon-social">
-                          <use href="images/icons.svg#icon-linkedin"></use>
+                          <use href="icons/icons.svg#icon-linkedin"></use>
                         </svg>
                       </a>
                     </li>
@@ -274,10 +314,18 @@
             <li class="team-item">
               <div class="member-card">
                 <img
-                  src="images/mykola.jpg"
-                  alt="Mykola Tarasov"
-                  width="270"
-                  height="260"
+                  srcset="
+                    images/team/team-03_m-min.jpg    450w,
+                    images/team/team-03_m@2x-min.jpg 460w,
+                    images/team/team-03_t-min.jpg    354w,
+                    images/team/team-03_t@2x-min.jpg 374w,
+                    images/team/team-03_d-min.jpg    270w,
+                    images/team/team-03_d@2x-min.jpg 260w
+                  "
+                  sizes="(min-width: 1200px) 260px, (min-width: 768px) 374px, (min-width: 480px) 450px, 100vw"
+                  src="images/team/team-03_d-min.jpg"
+                  alt="John Smith"
+                  loading="lazy"
                 />
                 <div class="member-data">
                   <h3 class="member-name">Микола Тарасов</h3>
@@ -287,7 +335,7 @@
                     <li>
                       <a href="/" class="socials-link link">
                         <svg class="icon-social">
-                          <use href="images/icons.svg#icon-instagram"></use>
+                          <use href="icons/icons.svg#icon-instagram"></use>
                         </svg>
                       </a>
                     </li>
@@ -295,7 +343,7 @@
                     <li>
                       <a href="/" class="socials-link link">
                         <svg class="icon-social">
-                          <use href="images/icons.svg#icon-twitter"></use>
+                          <use href="icons/icons.svg#icon-twitter"></use>
                         </svg>
                       </a>
                     </li>
@@ -303,7 +351,7 @@
                     <li>
                       <a href="/" class="socials-link link">
                         <svg class="icon-social">
-                          <use href="images/icons.svg#icon-facebook"></use>
+                          <use href="icons/icons.svg#icon-facebook"></use>
                         </svg>
                       </a>
                     </li>
@@ -311,7 +359,7 @@
                     <li>
                       <a href="/" class="socials-link link">
                         <svg class="icon-social">
-                          <use href="images/icons.svg#icon-linkedin"></use>
+                          <use href="icons/icons.svg#icon-linkedin"></use>
                         </svg>
                       </a>
                     </li>
@@ -323,10 +371,18 @@
             <li class="team-item">
               <div class="member-card">
                 <img
-                  src="images/mykhailo.jpg"
-                  alt="Mykhailo Ermakov"
-                  width="270"
-                  height="260"
+                  srcset="
+                    images/team/team-04_m-min.jpg    450w,
+                    images/team/team-04_m@2x-min.jpg 460w,
+                    images/team/team-04_t-min.jpg    354w,
+                    images/team/team-04_t@2x-min.jpg 374w,
+                    images/team/team-04_d-min.jpg    270w,
+                    images/team/team-04_d@2x-min.jpg 260w
+                  "
+                  sizes="(min-width: 1200px) 260px, (min-width: 768px) 374px, (min-width: 480px) 450px, 100vw"
+                  src="images/team/team-04_d-min.jpg "
+                  alt="John Smith"
+                  loading="lazy"
                 />
                 <div class="member-data">
                   <h3 class="member-name">Михайло Єрмаков</h3>
@@ -336,7 +392,7 @@
                     <li>
                       <a href="/" class="socials-link link">
                         <svg class="icon-social">
-                          <use href="images/icons.svg#icon-instagram"></use>
+                          <use href="icons/icons.svg#icon-instagram"></use>
                         </svg>
                       </a>
                     </li>
@@ -344,7 +400,7 @@
                     <li>
                       <a href="/" class="socials-link link">
                         <svg class="icon-social">
-                          <use href="images/icons.svg#icon-twitter"></use>
+                          <use href="icons/icons.svg#icon-twitter"></use>
                         </svg>
                       </a>
                     </li>
@@ -352,7 +408,7 @@
                     <li>
                       <a href="/" class="socials-link link">
                         <svg class="icon-social">
-                          <use href="images/icons.svg#icon-facebook"></use>
+                          <use href="icons/icons.svg#icon-facebook"></use>
                         </svg>
                       </a>
                     </li>
@@ -360,7 +416,7 @@
                     <li>
                       <a href="/" class="socials-link link">
                         <svg class="icon-social">
-                          <use href="images/icons.svg#icon-linkedin"></use>
+                          <use href="icons/icons.svg#icon-linkedin"></use>
                         </svg>
                       </a>
                     </li>
@@ -376,50 +432,50 @@
         <div class="container">
           <h2 class="caption">Постійні клієнти</h2>
           <ul class="client-list list">
-            <li>
+            <li class="client-item">
               <a href="/" class="client-card">
                 <svg class="icon-client">
-                  <use href="images/icons.svg#icon-square"></use>
+                  <use href="icons/icons.svg#icon-square"></use>
                 </svg>
               </a>
             </li>
 
-            <li>
+            <li class="client-item">
               <a href="/" class="client-card">
                 <svg class="icon-client">
-                  <use href="images/icons.svg#icon-book"></use>
+                  <use href="icons/icons.svg#icon-book"></use>
                 </svg>
               </a>
             </li>
 
-            <li>
+            <li class="client-item">
               <a href="/" class="client-card">
                 <svg class="icon-client">
-                  <use href="images/icons.svg#icon-oval"></use>
+                  <use href="icons/icons.svg#icon-oval"></use>
                 </svg>
               </a>
             </li>
 
-            <li>
-              <a href="/" class="client-card">
+            <li class="client-item">
+              <a href="/" class="client-card client-card-highlight">
                 <svg class="icon-client">
-                  <use href="images/icons.svg#icon-drops"></use>
+                  <use href="icons/icons.svg#icon-drops"></use>
                 </svg>
               </a>
             </li>
 
-            <li>
+            <li class="client-item">
               <a href="/" class="client-card">
                 <svg class="icon-client">
-                  <use href="images/icons.svg#icon-leaf"></use>
+                  <use href="icons/icons.svg#icon-leaf"></use>
                 </svg>
               </a>
             </li>
 
-            <li>
+            <li class="client-item">
               <a href="/" class="client-card">
                 <svg class="icon-client">
-                  <use href="images/icons.svg#icon-cub"></use>
+                  <use href="icons/icons.svg#icon-cub"></use>
                 </svg>
               </a>
             </li>
@@ -430,14 +486,16 @@
 
     <footer class="low-baseline">
       <div class="footer-parent container">
-        <div>
+        <div class="footer-address">
           <a href="/" class="footer-logo logo link"
             ><span class="logo__highlight">Web</span>Studio</a
           >
           <address>
             <ul class="address-list list">
               <li class="item">
-                <a href="/" class="location link">м. Київ, пр-т Лесі Українки, 26</a>
+                <a href="/" class="location link"
+                  >м. Київ, пр-т Лесі Українки, 26</a
+                >
               </li>
               <li class="item">
                 <a class="contact link" href="mailto:info@devstudio.com"
@@ -460,7 +518,7 @@
             <li>
               <a href="/" class="socials-link link">
                 <svg class="icon-social">
-                  <use href="images/icons.svg#icon-instagram"></use>
+                  <use href="icons/icons.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
@@ -468,7 +526,7 @@
             <li>
               <a href="/" class="socials-link link">
                 <svg class="icon-social">
-                  <use href="images/icons.svg#icon-twitter"></use>
+                  <use href="icons/icons.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
@@ -476,7 +534,7 @@
             <li>
               <a href="/" class="socials-link link">
                 <svg class="icon-social">
-                  <use href="images/icons.svg#icon-facebook"></use>
+                  <use href="icons/icons.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
@@ -484,28 +542,28 @@
             <li>
               <a href="/" class="socials-link link">
                 <svg class="icon-social">
-                  <use href="images/icons.svg#icon-linkedin"></use>
+                  <use href="icons/icons.svg#icon-linkedin"></use>
                 </svg>
               </a>
             </li>
           </ul>
         </div>
 
-        <form class="footer-form">
+        <div class="mailing-box">
           <h4 class="footer-text">Підпишіться на розсилку</h4>
-
-          <label class="mailing-field">
-            <input type="email" class="mailing-input" placeholder=" " />
-            <span class="mailing-label">E-mail</span>
-          </label>
-
-          <button type="submit" class="mailing-button button">
-            Підписатися
-            <svg class="icon-mailing">
-              <use href="images/icons.svg#icon-mailing"></use>
-            </svg>
-          </button>
-        </form>
+          <form class="footer-form">
+            <label class="mailing-field">
+              <input type="email" class="mailing-input" placeholder=" " />
+              <span class="mailing-label">E-mail</span>
+            </label>
+            <button type="submit" class="mailing-button button">
+              Підписатися
+              <svg class="icon-mailing">
+                <use href="icons/icons.svg#icon-mailing"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
 
@@ -513,7 +571,7 @@
       <div class="modal">
         <button data-modal-close class="close-button button">
           <svg class="icon-close">
-            <use href="images/icons.svg#icon-close"></use>
+            <use href="icons/icons.svg#icon-close"></use>
           </svg>
         </button>
 
@@ -532,7 +590,7 @@
                     placeholder=" "
                   />
                   <svg class="icon-persona form-icon">
-                    <use href="images/icons.svg#icon-persona"></use>
+                    <use href="icons/icons.svg#icon-persona"></use>
                   </svg>
                 </div>
               </label>
@@ -549,7 +607,7 @@
                     placeholder=" "
                   />
                   <svg class="icon-phone-number form-icon">
-                    <use href="images/icons.svg#icon-phone-number"></use>
+                    <use href="icons/icons.svg#icon-phone-number"></use>
                   </svg></div
               ></label>
             </li>
@@ -565,7 +623,7 @@
                     placeholder=" "
                   />
                   <svg class="icon-email-address form-icon">
-                    <use href="images/icons.svg#icon-email-address"></use>
+                    <use href="icons/icons.svg#icon-email-address"></use>
                   </svg></div
               ></label>
             </li>
@@ -582,15 +640,19 @@
           </label>
 
           <label class="form-agreement">
-            <input type="checkbox" class="agreement-checkbox visually-hidden" />
+            <input
+              type="checkbox"
+              class="agreement-checkbox visually-hidden"
+              checked
+            />
             <svg class="agreement-icon">
               <use
-                class="agreement-icon-check"
-                href="images/icons.svg#icon-checked"
+                class="agreement-icon-uncheck"
+                href="icons/icons.svg#icon-unchecked"
               ></use>
               <use
-                class="agreement-icon-uncheck"
-                href="images/icons.svg#icon-unchecked"
+                class="agreement-icon-check"
+                href="icons/icons.svg#icon-checked"
               ></use>
             </svg>
             <span class="agreement-text">
@@ -606,6 +668,41 @@
       </div>
     </div>
 
+    <!-- MOBILE MENU -->
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle-close js-close-menu button">
+        <svg class="menu-icon-close">
+          <use href="icons/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu-nav list">
+        <li><a href="index.html" class="link active">Студія</a></li>
+        <li><a href="portfolio.html" class="link">Портфоліо</a></li>
+        <li><a href="/" class="link">Контакти</a></li>
+      </ul>
+      <ul class="mobile-menu-contacts list">
+        <li><a href="/" class="menu-number link">+38 096 111 11 11</a></li>
+        <li><a href="/" class="menu-email link">info@devstudio.com</a></li>
+      </ul>
+      <ul class="mobile-menu-socilas list">
+        <li class="menu-socials-item">
+          <a href="/" class="menu-socials link">Instagram</a>
+        </li>
+        <li class="menu-socials-item">
+          <a href="/" class="menu-socials link">Twitter</a>
+        </li>
+        <li class="menu-socials-item">
+          <a href="/" class="menu-socials link">Facebook</a>
+        </li>
+        <li class="menu-socials-item">
+          <a href="/" class="menu-socials link">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+
     <script src="modal.js"></script>
+    <script src="mobile-menu.js"></script>
   </body>
 </html>

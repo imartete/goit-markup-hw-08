@@ -22,18 +22,22 @@
 }
 
 .agreement-checkbox:checked + .agreement-icon .agreement-icon-uncheck {
-  opacity: 0;
-}
-
-.agreement-checkbox:checked + .agreement-icon .agreement-icon-check {
   opacity: 1;
 }
 
+.agreement-checkbox:checked + .agreement-icon .agreement-icon-check {
+  opacity: 0;
+}
+
 .agreement-text {
+  font-size: 12px;
   line-height: 1.7;
   letter-spacing: 0.03em;
   user-select: none;
   color: var(--dimmed-text);
+  @include mq(desk) {
+    font-size: 14px;
+  }
 }
 
 .agreement-link {

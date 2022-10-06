@@ -1,6 +1,13 @@
 .caption {
-  font-size: 36px;
+  display: block;
+  text-align: center;
+  font-size: 28px;
   line-height: 1.1;
   letter-spacing: 0.03em;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+
+  @include mq(desk) {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }

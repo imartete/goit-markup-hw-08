@@ -1,3 +1,11 @@
 .section {
-  padding: 94px 0;
+  // Mobile screen
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  // Desktop screen
+  @include mq(desk) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
