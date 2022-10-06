@@ -8,6 +8,12 @@ h6 {
   margin: 0;
 }
 
+address {
+  text-decoration: none;
+  color: inherit;
+  font-style: inherit;
+}
+
 .list {
   list-style-type: none;
   padding: 0;
@@ -20,3 +26,5 @@ h6 {
   display: inline-block;
   cursor: pointer;
 }
+
+

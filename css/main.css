@@ -61,12 +61,6 @@ img {
   height: auto;
 }
 
-address {
-  text-decoration: none;
-  color: inherit;
-  font-style: inherit;
-}
-
 p,
 h1,
 h2,
@@ -75,6 +69,12 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+
+address {
+  text-decoration: none;
+  color: inherit;
+  font-style: inherit;
 }
 
 .list {
@@ -456,21 +456,19 @@ h6 {
   width: 16px;
   height: 15px;
 }
-
-.agreement-icon-uncheck {
+.agreement-iconuncheck {
   display: block;
+  -webkit-transition: opacity var(--animate);
+  transition: opacity var(--animate);
+}
+.agreement-iconcheck {
+  opacity: 0;
   -webkit-transition: opacity var(--animate);
   transition: opacity var(--animate);
 }
 
 .agreement-checkbox:checked + .agreement-icon .agreement-icon-uncheck {
   opacity: 0;
-}
-
-.agreement-icon-check {
-  opacity: 0;
-  -webkit-transition: opacity var(--animate);
-  transition: opacity var(--animate);
 }
 
 .agreement-checkbox:checked + .agreement-icon .agreement-icon-check {

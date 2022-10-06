@@ -1,7 +1,21 @@
 .products-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: start;
   gap: 30px;
+}
+
+.product-item {
+  max-width: 450px;
+  flex-grow: 1;
+
+  @include mq(tab-only) {
+    max-width: 354px;
+  }
+
+  @include mq(desk) {
+    width: 370px;
+  }
 }
 
 .product-data {
@@ -12,7 +26,7 @@
 }
 
 .product-link {
-  display: block;
+  width: 100%;
   transition: box-shadow var(--animate);
 
   &:hover,
@@ -22,7 +36,8 @@
   }
 
   &:hover .product-overlay,
-  &:focus .product-overlay {
+  &:focus .product-overlay,
+  &:active .product-overlay {
     opacity: 1;
     transform: translateY(0);
   }
@@ -48,13 +63,14 @@
 }
 
 .product-card {
+  height: 100%;
+  width: 100%;
   position: relative;
   overflow: hidden;
 }
 
 .product-name {
   margin-bottom: 4px;
-
   font-size: 18px;
   font-weight: 700;
   line-height: 2;
@@ -68,4 +84,8 @@
   font-size: 16px;
   line-height: 1.8;
   letter-spacing: 0.03em;
+}
+
+.product-img {
+  width: 100%;
 }

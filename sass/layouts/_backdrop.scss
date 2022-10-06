@@ -14,14 +14,13 @@
 }
 
 .modal {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  transform: scale(1);
 
   border-radius: 4px;
-  max-width: 528px;
-  min-height: 581px;
   padding: 40px;
 
   background: var(--bg);
@@ -29,8 +28,28 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   visibility: visible;
   transition: transform var(--animate);
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+    height: 609px;
+  }
+
+  @media screen and (min-width: 768px) and (min-height: 609px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @include mq(desk) {
+    min-width: 528px;
+    min-height: 581px;
+  }
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.5);
+  transform: scale(0.5);
+  @media screen and (min-width: 768px) and (min-height: 609px) {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
 }

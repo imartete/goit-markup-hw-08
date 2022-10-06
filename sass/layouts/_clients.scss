@@ -1,17 +1,16 @@
-.client-bar {
-  text-align: center;
-}
-
 .client-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
+  justify-content: center;
+  align-items: center;
 }
 
 .client-card {
+  flex-grow: 1;
+  min-width: 210px;
+  min-height: 92px;
   color: var(--dimmed-icons);
-
-  height: 92px;
-  width: 170px;
   border: solid 1px var(--dimmed-icons);
   border-radius: 4px;
 
@@ -19,10 +18,24 @@
   align-items: center;
   justify-content: center;
 
-  transition: border-color var(--animate), color var(--animate);
+  @include mq(tab-only) {
+    min-width: 226px;
+  }
 
-  &:hover,
-  &:focus {
+  @include mq(desk) {
+    min-width: 170px;
+
+    transition: border-color var(--animate), color var(--animate);
+    &:hover,
+    &:focus {
+      border: solid 1px var(--highlights);
+      color: var(--highlights);
+    }
+  }
+}
+
+.client-card-highlight {
+  @include mq(not-desk) {
     border: solid 1px var(--highlights);
     color: var(--highlights);
   }
