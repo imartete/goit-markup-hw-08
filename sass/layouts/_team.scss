@@ -24,7 +24,7 @@
 .team-item {
   max-width: 450px;
   display: block;
-  
+
   @include mq(tab-only) {
     width: 354px;
   }
@@ -68,4 +68,8 @@
 
 .member-socials {
   color: var(--dimmed-icons);
+}
+
+.team-img {
+  width: 100%;
 }

@@ -25,6 +25,7 @@
 
     align-items: baseline;
     flex-direction: row;
+    gap: 70px;
   }
 }
 
@@ -66,7 +67,11 @@
   align-items: center;
 
   @include mq(desk) {
-    align-items: start;
+    display: block;
+    min-width: 231px;
+    & .item:not(:last-child) {
+      margin-bottom: 9px;
+    }
   }
 }
 
@@ -85,6 +90,11 @@
   @include mq(tab-only) {
     width: 50%;
   }
+
+  @include mq(desk) {
+    width: 100%;
+    align-items: start;
+  }
 }
 
 .footer-form {
@@ -92,15 +102,19 @@
   display: block;
 
   @media screen and (min-width: 768px) {
-    // display: flex;
-    // justify-content: center;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 
   @include mq(desk) {
+    flex-direction: row;
     display: flex;
-    justify-content: start;
+    justify-content: end;
     align-items: baseline;
+    margin-left: auto;
+    gap: 12px;
   }
 }
 
@@ -109,4 +123,7 @@
   line-height: 1.1;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+
+  @include mq(desk) {
+  }
 }
