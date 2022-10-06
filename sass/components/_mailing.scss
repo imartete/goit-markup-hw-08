@@ -12,15 +12,23 @@
   padding: 10px 26px;
   margin: 0 auto;
   margin-top: 20px;
+
+  @include mq(tab) {
+    margin: 0;
+  }
+
   @include mq(desk) {
     margin: 0;
-    margin-left: 12px;
   }
 }
 
 .mailing-field {
   position: relative;
   width: 100%;
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
 
   @include mq(desk) {
     width: 358px;
@@ -67,7 +75,6 @@
 }
 
 .mailing-box {
-  text-align: center;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -79,8 +86,6 @@
   }
 
   @include mq(desk) {
-    flex-flow: column wrap;
-    flex-direction: row;
     align-items: start;
   }
 }

@@ -308,16 +308,25 @@ address {
   margin: 0 auto;
   margin-top: 20px;
 }
+@media screen and (min-width: 768px) {
+  .mailing-button {
+    margin: 0;
+  }
+}
 @media screen and (min-width: 1200px) {
   .mailing-button {
     margin: 0;
-    margin-left: 12px;
   }
 }
 
 .mailing-field {
   position: relative;
   width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .mailing-field {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .mailing-field {
@@ -375,7 +384,6 @@ address {
 }
 
 .mailing-box {
-  text-align: center;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -396,12 +404,6 @@ address {
 }
 @media screen and (min-width: 1200px) {
   .mailing-box {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column wrap;
-            flex-flow: column wrap;
-    -ms-flex-direction: row;
-        flex-direction: row;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
@@ -555,8 +557,8 @@ address {
 }
 
 .agreement-icon {
-  width: 16px;
-  height: 15px;
+  max-width: 16px;
+  max-height: 15px;
 }
 .agreement-iconuncheck {
   display: block;
@@ -907,10 +909,9 @@ address {
 .hero {
   background-color: var(--page-highlights);
   text-align: center;
-  padding: 200px 0;
+  padding: 118px 0;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/bg/hero_m-min.jpg);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/hero_m-min.jpg);
-  height: 600px;
   max-width: 1600px;
   margin: 0 auto;
   background-size: cover;
@@ -945,6 +946,11 @@ address {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/bg/hero_d@2x-min.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/hero_d@2x-min.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding: 200px 0;
   }
 }
 
@@ -1188,6 +1194,10 @@ address {
   color: var(--dimmed-icons);
 }
 
+.team-img {
+  width: 100%;
+}
+
 .client-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1298,6 +1308,7 @@ address {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    gap: 70px;
   }
 }
 
@@ -1356,9 +1367,11 @@ address {
 }
 @media screen and (min-width: 1200px) {
   .address-list {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
+    display: block;
+    min-width: 231px;
+  }
+  .address-list .item:not(:last-child) {
+    margin-bottom: 9px;
   }
 }
 
@@ -1389,6 +1402,14 @@ address {
     width: 50%;
   }
 }
+@media screen and (min-width: 1200px) {
+  .footer-socials {
+    width: 100%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+}
 
 .footer-form {
   width: 100%;
@@ -1396,20 +1417,36 @@ address {
 }
 @media screen and (min-width: 768px) {
   .footer-form {
-    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
   }
 }
 @media screen and (min-width: 1200px) {
   .footer-form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
+    margin-left: auto;
+    gap: 12px;
   }
 }
 
@@ -1419,7 +1456,6 @@ address {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
-
 .backdrop {
   position: fixed;
   top: 0;
